@@ -1,0 +1,57 @@
+/* Banner */
+.terms-banner {
+  height: 350px;
+  background: url("/image/foodbanner.png") center/cover no-repeat;
+  position: relative;
+}
+
+.terms-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(39, 38, 38, 0.6);
+}
+
+.banner-title {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.terms-page {
+  background-color: #ffffff;
+}
+
+.terms-title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.terms-section {
+  margin-bottom: 35px;
+}
+
+.terms-section h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.terms-section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #3e3e3e;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .terms-title {
+    font-size: 24px;
+  }
+
+  .terms-section p {
+    font-size: 14px;
+  }
+}

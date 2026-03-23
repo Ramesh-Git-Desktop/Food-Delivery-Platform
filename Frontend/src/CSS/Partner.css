@@ -1,0 +1,1672 @@
+.partner-wrapper{
+  font-family:'Inter',sans-serif;
+}
+
+/* ================= HERO ================= */
+
+.partner-hero{
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 140px;
+  color:white;
+}
+
+/* Softer overlay */
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+}
+
+/* LEFT TEXT */
+
+.hero-left{
+  position:relative;
+  max-width:480px;
+  z-index:2;
+}
+
+.hero-left h1{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-1px;
+}
+
+.tag{
+  letter-spacing:4px;
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+.dots span{
+  height:6px;
+  width:38px;
+  background:white;
+  margin-right:8px;
+  display:inline-block;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+/* ================= LOGIN CARD ================= */
+
+.login-card{
+  position:relative;
+  z-index:2;
+  background:white;
+  color:black;
+  padding:36px;
+  border-radius:20px;
+  width:360px;
+  box-shadow:0 45px 120px rgba(0,0,0,0.35);
+}
+
+.login-card p{
+  color:#6b6b6b;
+}
+
+.login-card input{
+  width:100%;
+  padding:16px;
+  margin:20px 0;
+  border-radius:12px;
+  border:1px solid #e6e6e6;
+}
+
+.login-card button{
+  width:100%;
+  padding:16px;
+  border:none;
+  background:#e6d6b8;
+  font-weight:700;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ================= READY SECTION ================= */
+
+.ready-section{
+  display:flex;
+  justify-content:center;
+  gap:120px;
+  padding:110px 140px;
+  background:#ffffff;
+}
+
+.small-text{
+  font-size:14px;
+  color:#777;
+}
+
+.ready-title{
+  font-size:30px;
+  font-weight:800;
+  margin:10px 0 35px;
+}
+
+/* TIMELINE */
+
+.steps-card{
+  position:relative;
+  background:#f3f3f3;
+  border-radius:18px;
+  padding:42px;
+  width:520px;
+}
+
+.vertical-line{
+  position:absolute;
+  left:60px;
+  top:40px;
+  bottom:40px;
+  border-left:2px dashed #bdbdbd;
+}
+
+.step{
+  display:flex;
+  gap:20px;
+  margin-bottom:38px;
+}
+
+.dot{
+  height:14px;
+  width:14px;
+  background:#2f3c97;
+  border-radius:50%;
+  margin-top:6px;
+}
+
+.step-label{
+  font-size:11px;
+  color:#9b9b9b;
+  letter-spacing:1px;
+}
+
+/* RIGHT DOC LIST */
+
+.docs-wrapper{
+  width:420px;
+}
+
+.docs-wrapper h3{
+  font-size:22px;
+  font-weight:800;
+}
+
+.docs-sub{
+  color:#6b6b6b;
+}
+
+.dashed{
+  border-top:2px dashed #bdbdbd;
+  margin:18px 0 24px;
+}
+
+.docs-list{
+  list-style:none;
+  padding:0;
+}
+
+.docs-list li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+/* GREEN DOT */
+
+.tick{
+  height:8px;
+  width:8px;
+  background:#22c55e;
+  border-radius:50%;
+}
+
+.docs-list a{
+  color:#22c55e;
+  margin-left:6px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* ================= SECOND HERO ================= */
+
+.second .overlay{
+  background:rgba(0,0,0,0.40);
+}
+
+.benefit{
+  color:#ffd84d;
+  font-weight:800;
+}
+
+/* RIGHT CARD */
+
+.onboard-card{
+  background:#f4f4f4;
+  padding:36px;
+  width:430px;
+  border-radius:22px;
+  z-index:2;
+  box-shadow:0 35px 100px rgba(0,0,0,0.30);
+  color:#222;
+}
+
+.sub-text{
+  color:#707070;
+}
+
+.divider{
+  border-top:2px dashed #bdbdbd;
+  margin:20px 0;
+}
+
+.onboard-list{
+  list-style:none;
+  padding:0;
+}
+
+.onboard-list li{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+  font-weight:600;
+}
+
+.green-dot{
+  height:8px;
+  width:8px;
+  background:#22c55e;
+  border-radius:50%;
+}
+
+.begin-btn{
+  width:100%;
+  margin-top:20px;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:#e6d6b8;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ================= RESTAURANT NAME CARD - EXACT MATCH ================= */
+
+.name-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  z-index:2;
+  width:420px;
+}
+
+.name-card{
+  width:100%;
+  background:#f4f4f4;
+  border-radius:28px;
+  padding:32px 32px 0 32px;
+  box-shadow:0 50px 140px rgba(0,0,0,0.35);
+}
+
+.restaurant-label{
+  font-weight:700;
+  color:#111;
+  font-size:18px;
+  display:block;
+  margin-bottom:12px;
+}
+
+.restaurant-input{
+  width:100%;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #dedede;
+  background:white;
+  font-size:16px;
+  box-sizing:border-box;
+  margin-bottom:24px;
+}
+
+.restaurant-input:focus {
+  outline:none;
+  border-color:#b8a88a;
+}
+
+.note-strip{
+  width:calc(100% + 64px);
+  margin-left:-32px;
+  background:#e7d9bd;
+  padding:18px 32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.18);
+  position:relative;
+  box-sizing:border-box;
+}
+
+/* folded corners - exactly like first image */
+.note-strip::before,
+.note-strip::after{
+  content:"";
+  position:absolute;
+  bottom:-10px;
+  width:20px;
+  height:20px;
+  background:#d8c8a7;
+}
+
+.note-strip::before{
+  left:0;
+  clip-path:polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.note-strip::after{
+  right:0;
+  clip-path:polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.note-text{
+  flex:1;
+}
+
+.note-text strong{
+  font-size:15px;
+  display:block;
+  color:#111;
+}
+
+.note-text p{
+  font-size:13px;
+  margin-top:4px;
+  color:#333;
+  margin-bottom:0;
+  line-height:1.4;
+}
+
+.shop-icon{
+  font-size:32px;
+  color:#444;
+  margin-left:15px;
+}
+
+.save-btn{
+  width:calc(100% + 64px);
+  margin-left:-32px;
+  padding:18px;
+  border:none;
+  background:#d6c6a6;
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+  transition:background 0.2s ease;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+}
+
+.save-btn:hover {
+  background:#c9b692;
+}
+
+.confirm-btn{
+  width:260px;
+  margin-top:24px;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:#e6d6b8;
+  font-weight:700;
+  font-size:16px;
+  cursor:pointer;
+  transition:background 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background:#d9c5a3;
+}
+
+/* ================= FORM ================= */
+
+/* =====================================================
+   ⭐⭐⭐ SCREEN 4 — STEPPER + FORM (PIXEL PERFECT)
+   ADD BELOW YOUR EXISTING CSS
+===================================================== */
+
+.form-section{
+  background:#f5f5f5;
+  padding:120px 60px;
+}
+
+/* ⭐ 2 COLUMN LAYOUT */
+
+.form-layout{
+  display:flex;
+  gap:90px;
+  align-items:flex-start;
+  max-width:1300px;
+  margin:auto;
+}
+
+/* =====================================================
+   LEFT STEPPER
+===================================================== */
+
+.form-stepper{
+  width:320px;
+}
+
+.stepper-card{
+  position:relative;
+  background:#ededed;
+  padding:50px 40px;
+  border-radius:18px;
+}
+
+/* dashed vertical line */
+
+.stepper-line{
+  position:absolute;
+  left:58px;
+  top:60px;
+  bottom:60px;
+  border-left:2px dashed #bdbdbd;
+}
+
+/* step item */
+
+.stepper-item{
+  display:flex;
+  gap:18px;
+  margin-bottom:42px;
+  align-items:flex-start;
+}
+
+.stepper-dot{
+  height:12px;
+  width:12px;
+  background:#cfcfcf;
+  border-radius:50%;
+  margin-top:6px;
+}
+
+/* active step */
+
+.stepper-item.active .stepper-dot{
+  background:#34c759;
+  box-shadow:0 0 0 4px rgba(52,199,89,0.15);
+}
+
+.step-title{
+  font-size:11px;
+  letter-spacing:1px;
+  color:#9b9b9b;
+}
+
+.stepper-item h4{
+  font-size:15px;
+  margin:2px 0;
+}
+
+.stepper-item small{
+  color:#777;
+  font-size:12px;
+}
+
+/* =====================================================
+   RIGHT FORM
+===================================================== */
+
+.form-container{
+  flex:1;
+  max-width:720px;
+}
+
+.form-main-title{
+  font-size:26px;
+  font-weight:800;
+  margin-bottom:30px;
+}
+
+/* bordered cards (REFERENCE STYLE) */
+
+/* ================= OWNER CONTROL DETAILS FIX ================= */
+
+.form-card.bordered{
+  background:#f6f6f6;
+  border:1.5px solid #cfcfcf;
+  border-radius:16px;
+  padding:34px;
+  margin-top:28px;
+  box-shadow:none;
+}
+
+/* Title */
+
+.form-card.bordered h3{
+  font-size:20px;
+  font-weight:700;
+  color:#111;
+  margin-bottom:6px;
+}
+
+/* subtitle */
+
+.muted{
+  color:#6f6f6f;
+  font-size:14px;
+  margin-bottom:26px;
+}
+
+/* Inputs */
+
+.form-card.bordered input[type="text"],
+.form-card.bordered input[type="email"],
+.form-card.bordered input[type="tel"]{
+  width:100%;
+  height:58px;
+  border-radius:12px;
+  border:1.5px solid #d6d6d6;
+  padding:0 18px;
+  font-size:15px;
+  margin-bottom:18px;
+  background:white;
+}
+
+/* ⭐ DASHED DIVIDER */
+
+.radio-group{
+  border-top:2px dashed #bdbdbd;
+  margin-top:22px;
+  padding-top:22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* helper text */
+
+.radio-group::before{
+  content:"Provides your WhatsApp number to get insights on ratings, menu , etc";
+  font-size:13px;
+  color:#666;
+  margin-bottom:6px;
+}
+
+/* radio label */
+
+.radio-group label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:15px;
+  color:#111;
+  cursor:pointer;
+}
+
+/* radio button — modern look */
+
+.radio-group input[type="radio"]{
+  appearance:none;
+  width:18px;
+  height:18px;
+  border:2px solid #bdbdbd;
+  border-radius:50%;
+  position:relative;
+}
+
+.radio-group input[type="radio"]:checked{
+  border:5px solid #ff6b2c; /* orange dot */
+}
+
+/* inputs */
+
+.form-card input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #cfcfcf;
+  background:white;
+  font-size:14px;
+}
+
+/* location button */
+
+.location-btn{
+  width:100%;
+  padding:14px;
+  border-radius:8px;
+  border:none;
+  background:#dfe9df;
+  color:#2e7d32;
+  font-weight:600;
+  margin-top:6px;
+}
+
+/* =====================================================
+   RADIO GROUP
+===================================================== */
+
+.radio-group{
+  margin-top:10px;
+}
+
+.radio-group label{
+  display:block;
+  margin:8px 0;
+  font-size:14px;
+}
+
+/* =====================================================
+   WORKING DAYS GRID
+===================================================== */
+
+.days-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px 60px;
+  margin-top:10px;
+}
+
+.day-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+}
+
+/* Bigger checkboxes like UI */
+
+.day-item input{
+  width:18px;
+  height:18px;
+}
+
+/* =====================================================
+   TIME SECTION
+===================================================== */
+
+.radio{
+  display:block;
+  margin:10px 0;
+  font-size:14px;
+}
+
+/* =========================================
+   TIME SECTION
+========================================= */
+
+.time-row{
+  display:flex;
+  justify-content:space-between;
+  margin:28px 0;
+}
+
+/* open close buttons */
+
+.time-btn{
+  padding:12px 26px;
+  border-radius:26px;
+  border:1.5px solid #bdbdbd;
+  background:white;
+  font-size:14px;
+  cursor:pointer;
+}
+
+/* add slot */
+
+.slot{
+  font-weight:600;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+/* grey tip bubble */
+
+.tip{
+  background:#d9d9d9;
+  padding:14px 22px;
+  border-radius:28px;
+  font-size:13px;
+  color:#555;
+  width:75%;
+}
+
+/* =========================================
+   PROCEED BUTTON
+========================================= */
+
+.proceed{
+  width:100%;
+  height:65px;
+  border:none;
+  border-radius:18px;
+  background:#bdbdbd;
+  font-size:18px;
+  font-weight:700;
+  margin-top:18px;
+}
+/* =====================================
+🔥 PIXEL PERFECT ORANGE RADIO BUTTON
+===================================== */
+
+/* Hide default radio completely */
+
+.radio-group input[type="radio"]{
+  appearance:none;
+  -webkit-appearance:none;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  border:3px solid #cfcfcf;
+  background:white;
+  cursor:pointer;
+  position:relative;
+  transition:all .2s ease;
+}
+
+/* ORANGE RING WHEN SELECTED */
+
+.radio-group input[type="radio"]:checked{
+  border:7px solid #ff5a1f;
+  background:white;
+}
+
+/* PERFECT ALIGNMENT */
+
+.radio-group label{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+/* spacing like design */
+
+.radio-group{
+  border-top:2px dashed #bdbdbd;
+  margin-top:24px;
+  padding-top:20px;
+}
+/* =========================================
+FINAL RADIO FIX — SMALL LEFT SIDE
+Overrides ALL previous radio styles
+========================================= */
+
+/* OWNER CONTROL + TIME radios */
+
+.radio-group input[type="radio"],
+.radio input[type="radio"]{
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  width:16px;
+  height:16px;
+  min-width:16px;
+
+  border-radius:50%;
+  border:2px solid #bdbdbd;
+  background:white;
+
+  cursor:pointer;
+  position:relative;
+ 
+}
+
+
+/* SMALL ORANGE DOT */
+
+.radio-group input[type="radio"]::after,
+.radio input[type="radio"]::after{
+
+  content:"";
+  position:absolute;
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+  background:#ff5a1f;
+
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(0);
+  transition:0.15s;
+}
+
+
+/* show dot when checked */
+
+.radio-group input[type="radio"]:checked::after,
+.radio input[type="radio"]:checked::after{
+
+  transform:translate(-50%, -50%) scale(1);
+}
+
+
+/* perfect alignment */
+
+.radio-group label,
+.radio{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  justify-content:flex-start;
+  font-size:14px;
+  cursor:pointer;
+}
+
+/* =========================================
+   NEW CIRCLE STYLES - ADDED FOR EXACT MATCH
+   ========================================= */
+
+/* Override previous radio styles */
+.radio-group input[type="radio"],
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-group label,
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Custom radio circles */
+.radio-group .radio-custom,
+.radio .radio-custom-hour {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  flex-shrink: 0;
+}
+
+/* First option with warning icon */
+.radio-group label:first-child .radio-custom::before {
+  content: "⚠️";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* Second option with hollow circle */
+.radio-group label:last-child .radio-custom::before {
+  content: "○";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #666;
+  z-index: 2;
+}
+
+/* When checked - solid red dot */
+.radio-group input[type="radio"]:checked + .radio-custom,
+.radio input[type="radio"]:checked + .radio-custom-hour {
+  border-color: #ff4444;
+  background: #ff4444;
+}
+
+.radio-group input[type="radio"]:checked + .radio-custom::before,
+.radio input[type="radio"]:checked + .radio-custom-hour::before {
+  display: none;
+}
+
+/* Working hours first option (non-radio) */
+.working-hours-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #111;
+  line-height: 1.4;
+}
+
+.red-dot-large {
+  font-size: 18px;
+  min-width: 24px;
+  color: #ff4444;
+}
+
+/* Ensure radio group has proper spacing */
+.radio-group {
+  border-top: 2px dashed #bdbdbd;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.radio-group::before {
+  content: "Provides your WhatsApp number to get insights on ratings, menu, etc";
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.radio-group label,
+.radio {
+  margin-bottom: 14px;
+}
+
+.radio-group label:last-child,
+.radio:last-child {
+  margin-bottom: 0;
+}
+/* =========================================
+   NEW CIRCLE STYLES - ADDED FOR EXACT MATCH
+   ========================================= */
+
+/* Override previous radio styles */
+.radio-group input[type="radio"],
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-group label,
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Custom radio circles */
+.radio-group .radio-custom,
+.radio .radio-custom-hour {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  flex-shrink: 0;
+}
+
+/* First option with warning icon */
+.radio-group label:first-child .radio-custom::before {
+  content: "⚠️";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* Second option with hollow circle */
+.radio-group label:last-child .radio-custom::before {
+  content: "○";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #666;
+  z-index: 2;
+}
+
+/* When checked - solid red dot */
+.radio-group input[type="radio"]:checked + .radio-custom,
+.radio input[type="radio"]:checked + .radio-custom-hour {
+  border-color: #ff4444;
+  background: #ff4444;
+}
+
+.radio-group input[type="radio"]:checked + .radio-custom::before,
+.radio input[type="radio"]:checked + .radio-custom-hour::before {
+  display: none;
+}
+
+/* Working hours first option (non-radio) */
+.working-hours-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #111;
+  line-height: 1.4;
+}
+
+.red-dot-large {
+  font-size: 18px;
+  min-width: 24px;
+  color: #ff4444;
+}
+
+/* Ensure radio group has proper spacing */
+.radio-group {
+  border-top: 2px dashed #bdbdbd;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.radio-group::before {
+  content: "Provides your WhatsApp number to get insights on ratings, menu, etc";
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.radio-group label,
+.radio {
+  margin-bottom: 14px;
+}
+
+.radio-group label:last-child,
+.radio:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== WORKING HOURS - CLICKABLE CIRCLES THAT TURN RED ===== */
+
+/* Container for both options */
+.working-hours-option,
+.radio-option-hour {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Hide default radio */
+.working-hours-option input[type="radio"],
+.radio-option-hour input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom radio circles - blank by default */
+.working-hours-option .radio-custom-hour,
+.radio-option-hour .radio-custom-hour {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* No icons inside */
+.working-hours-option .radio-custom-hour::before,
+.radio-option-hour .radio-custom-hour::before {
+  content: none;
+}
+
+/* When checked - solid red dot */
+.working-hours-option input[type="radio"]:checked + .radio-custom-hour,
+.radio-option-hour input[type="radio"]:checked + .radio-custom-hour {
+  border-color: #ff4444;
+  background: #ff4444;
+}
+
+/* Optional: Add hover effect */
+.working-hours-option:hover .radio-custom-hour,
+.radio-option-hour:hover .radio-custom-hour {
+  border-color: #999;
+}
+/* =========================================
+   RESPONSIVE DESIGN - ADDED FOR ALL SECTIONS
+   ========================================= */
+
+
+/* Large Desktop (1200px - 1400px) */
+@media (max-width: 1400px) {
+  .partner-hero {
+    padding: 0 80px;
+  }
+  
+  .ready-section {
+    padding: 90px 80px;
+    gap: 80px;
+  }
+  
+  .form-section {
+    padding: 100px 40px;
+  }
+  
+  .form-layout {
+    gap: 60px;
+  }
+}
+
+/* Desktop (992px - 1199px) */
+@media (max-width: 1199px) {
+  .partner-hero {
+    padding: 0 60px;
+  }
+  
+  .hero-left h1 {
+    font-size: 44px;
+  }
+  
+  .ready-section {
+    padding: 80px 40px;
+    gap: 60px;
+  }
+  
+  .steps-card {
+    width: 450px;
+    padding: 35px;
+  }
+  
+  .docs-wrapper {
+    width: 380px;
+  }
+  
+  .form-layout {
+    gap: 40px;
+  }
+  
+  .form-stepper {
+    width: 280px;
+  }
+  
+  .stepper-card {
+    padding: 40px 30px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .partner-hero {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 30px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-left h1 {
+    font-size: 40px;
+  }
+  
+  .dots {
+    justify-content: center;
+    display: flex;
+  }
+  
+  .login-card,
+  .onboard-card,
+  .name-wrapper {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .ready-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px;
+    gap: 50px;
+  }
+  
+  .ready-left {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .steps-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  
+  .docs-wrapper {
+    width: 100%;
+    max-width: 520px;
+  }
+  
+  .form-section {
+    padding: 80px 30px;
+  }
+  
+  .form-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .form-stepper {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .time-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .time-btn {
+    width: 100%;
+  }
+  
+  .tip {
+    width: 100%;
+  }
+  
+  .days-grid {
+    gap: 15px 30px;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) {
+  .partner-hero {
+    padding: 50px 20px;
+  }
+  
+  .hero-left h1 {
+    font-size: 34px;
+  }
+  
+  .tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+  
+  .login-card,
+  .onboard-card {
+    padding: 30px 25px;
+  }
+  
+  .ready-section {
+    padding: 50px 20px;
+  }
+  
+  .ready-title {
+    font-size: 26px;
+  }
+  
+  .steps-card {
+    padding: 30px 25px;
+  }
+  
+  .vertical-line {
+    left: 45px;
+  }
+  
+  .step {
+    gap: 15px;
+  }
+  
+  .form-section {
+    padding: 60px 20px;
+  }
+  
+  .form-main-title {
+    font-size: 24px;
+  }
+  
+  .form-card.bordered {
+    padding: 25px;
+  }
+  
+  .days-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .radio-group label,
+  .radio {
+    font-size: 14px;
+  }
+  
+  /* Restaurant name card responsive */
+  .name-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .name-card {
+    padding: 25px 25px 0 25px;
+  }
+  
+  .note-strip {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    padding: 15px 25px;
+  }
+  
+  .save-btn {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+  }
+  
+  .confirm-btn {
+    width: 220px;
+  }
+  
+  .note-strip::before,
+  .note-strip::after {
+    width: 15px;
+    height: 15px;
+    bottom: -7px;
+  }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media (max-width: 575px) {
+  .partner-hero {
+    padding: 40px 15px;
+  }
+  
+  .hero-left h1 {
+    font-size: 28px;
+  }
+  
+  .dots span {
+    width: 30px;
+    height: 5px;
+  }
+  
+  .login-card,
+  .onboard-card {
+    padding: 25px 20px;
+  }
+  
+  .login-card h3,
+  .onboard-card h3 {
+    font-size: 20px;
+  }
+  
+  .login-card input,
+  .onboard-card input,
+  .form-card.bordered input[type="text"],
+  .form-card.bordered input[type="email"],
+  .form-card.bordered input[type="tel"] {
+    height: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  
+  .ready-section {
+    padding: 40px 15px;
+  }
+  
+  .ready-title {
+    font-size: 22px;
+  }
+  
+  .steps-card {
+    padding: 25px 20px;
+  }
+  
+  .vertical-line {
+    left: 38px;
+  }
+  
+  .step h4 {
+    font-size: 15px;
+  }
+  
+  .docs-wrapper h3 {
+    font-size: 20px;
+  }
+  
+  .docs-list li {
+    font-size: 14px;
+  }
+  
+  .form-section {
+    padding: 50px 15px;
+  }
+  
+  .form-main-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .form-card.bordered {
+    padding: 20px;
+  }
+  
+  .form-card.bordered h3 {
+    font-size: 18px;
+  }
+  
+  .muted {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .radio-group::before {
+    font-size: 12px;
+  }
+  
+  .radio-group .radio-custom,
+  .radio .radio-custom-hour {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .radio-group label:first-child .radio-custom::before {
+    font-size: 10px;
+  }
+  
+  .radio-group label:last-child .radio-custom::before {
+    font-size: 12px;
+  }
+  
+  .time-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .slot {
+    font-size: 13px;
+  }
+  
+  .tip {
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+  
+  .proceed {
+    height: 55px;
+    font-size: 16px;
+  }
+  
+  /* Restaurant name card mobile */
+  .name-wrapper {
+    max-width: 350px;
+  }
+  
+  .name-card {
+    padding: 22px 22px 0 22px;
+  }
+  
+  .restaurant-label {
+    font-size: 16px;
+  }
+  
+  .restaurant-input {
+    padding: 14px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .note-strip {
+    width: calc(100% + 44px);
+    margin-left: -22px;
+    padding: 14px 22px;
+  }
+  
+  .note-text strong {
+    font-size: 14px;
+  }
+  
+  .note-text p {
+    font-size: 12px;
+  }
+  
+  .shop-icon {
+    font-size: 26px;
+  }
+  
+  .save-btn {
+    width: calc(100% + 44px);
+    margin-left: -22px;
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .confirm-btn {
+    width: 200px;
+    padding: 14px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  
+  .note-strip::before,
+  .note-strip::after {
+    width: 12px;
+    height: 12px;
+    bottom: -6px;
+  }
+}
+
+/* Small Mobile (up to 375px) */
+@media (max-width: 375px) {
+  .hero-left h1 {
+    font-size: 24px;
+  }
+  
+  .login-card,
+  .onboard-card {
+    padding: 20px 15px;
+  }
+  
+  .login-card h3,
+  .onboard-card h3 {
+    font-size: 18px;
+  }
+  
+  .ready-title {
+    font-size: 20px;
+  }
+  
+  .steps-card {
+    padding: 20px 15px;
+  }
+  
+  .vertical-line {
+    left: 32px;
+  }
+  
+  .step {
+    gap: 12px;
+  }
+  
+  .step h4 {
+    font-size: 14px;
+  }
+  
+  .form-main-title {
+    font-size: 20px;
+  }
+  
+  .form-card.bordered h3 {
+    font-size: 16px;
+  }
+  
+  .radio-group label,
+  .radio {
+    gap: 8px;
+    font-size: 13px;
+  }
+  
+  .radio-group .radio-custom,
+  .radio .radio-custom-hour {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Restaurant name card small mobile */
+  .name-wrapper {
+    max-width: 300px;
+  }
+  
+  .name-card {
+    padding: 20px 20px 0 20px;
+  }
+  
+  .note-strip {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 12px 20px;
+  }
+  
+  .save-btn {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+  
+  .confirm-btn {
+    width: 180px;
+  }
+}
+
+/* Height-based adjustments for hero sections */
+@media (max-height: 700px) {
+  .partner-hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 140px;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 991px) {
+  .partner-hero {
+    padding: 60px 30px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .partner-hero,
+  .ready-section,
+  .form-section {
+    background: white;
+    color: black;
+    padding: 20px;
+    height: auto;
+  }
+  
+  .overlay {
+    display: none;
+  }
+  
+  .login-card,
+  .onboard-card,
+  .name-card,
+  .form-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}

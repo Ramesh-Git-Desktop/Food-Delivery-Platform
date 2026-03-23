@@ -1,0 +1,313 @@
+/* =========================
+   DOMINOS WRAPPER
+========================= */
+.dominos-wrapper {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* =========================
+   HERO BANNER
+========================= */
+.dominos-hero-banner {
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dominos-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+}
+
+.dominos-banner-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.dominos-banner-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dominos-banner-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.dominos-banner-features {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.dominos-feature-item {
+  background: rgba(255,255,255,0.15);
+  padding: 8px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   MENU CONTAINER
+========================= */
+.dominos-menu-container {
+  padding: 40px 6%;
+}
+
+/* =========================
+   CATEGORY TABS
+========================= */
+.dominos-category-tabs {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.dominos-category-tab {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #e9ecef;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.dominos-category-tab:hover {
+  background: #d0d4d9;
+}
+
+.dominos-category-tab.dominos-active {
+  background: #007bff;
+  color: white;
+}
+
+/* =========================
+   HEADER + FILTER
+========================= */
+.dominos-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dominos-menu-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.dominos-filter-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.dominos-filter-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s;
+}
+
+.dominos-filter-btn:hover {
+  background: #f1f1f1;
+}
+
+.dominos-filter-btn.dominos-active {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+/* =========================
+   VEG / NON VEG ICON
+========================= */
+.dominos-veg-icon,
+.dominos-nonveg-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dominos-veg-icon {
+  background: green;
+}
+
+.dominos-nonveg-icon {
+  background: red;
+}
+
+/* =========================
+   GRID
+========================= */
+.dominos-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* =========================
+   CARD
+========================= */
+.dominos-menu-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  animation: dominosFadeUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.dominos-menu-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes dominosFadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dominos-item-image-wrapper {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.dominos-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.dominos-menu-item:hover .dominos-item-image {
+  transform: scale(1.08);
+}
+
+/* FOOD TYPE BADGE */
+.dominos-food-type-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 4px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.dominos-food-type-badge.dominos-veg .dominos-type-icon {
+  width: 12px;
+  height: 12px;
+  background: green;
+  border-radius: 50%;
+  display: block;
+}
+
+.dominos-food-type-badge.dominos-nonveg .dominos-type-icon {
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 50%;
+  display: block;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.dominos-item-content {
+  padding: 18px;
+}
+
+.dominos-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dominos-item-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dominos-item-price {
+  font-weight: 700;
+  color: #007bff;
+}
+
+.dominos-item-description {
+  font-size: 13px;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.dominos-item-footer {
+  margin-top: 10px;
+}
+
+.dominos-add-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.dominos-add-btn:hover {
+  background: var(--secondary-color);
+}
+
+.dominos-btn-icon {
+  margin-right: 5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .dominos-banner-title {
+    font-size: 28px;
+  }
+
+  .dominos-menu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .dominos-menu-container {
+    padding: 30px 4%;
+  }
+}

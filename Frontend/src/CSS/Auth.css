@@ -1,0 +1,1139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.auth-container {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.auth-content {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  gap: 1rem;
+}
+
+/* Left Image Section */
+.auth-image-section {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  margin: 1rem 0 1rem 1rem;
+  position: relative;
+  min-height: 600px;
+  height: 600px;
+  max-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.image-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  border-radius: 40px;
+  color: white;
+  width: 100%;
+  margin-top: auto;
+}
+
+.image-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.image-subtitle {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Form Section */
+.auth-form-section {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  max-width: 500px;
+  margin: 1rem 1rem 1rem 0;
+  background: white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 600px;
+  height: 600px;
+  max-height: 600px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* Form Fields */
+.input-group {
+  margin-bottom: 1.2rem;
+  width: 100%;
+  position: relative;
+}
+
+.name-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.half-width {
+  flex: 1;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.phone-input,
+.auth-input {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  outline: none;
+  transition: border-color 0.2s;
+  background: transparent;
+}
+
+.phone-input:focus,
+.auth-input:focus {
+  border-bottom-color: orangered;
+}
+
+.phone-input::placeholder,
+.auth-input::placeholder {
+  color: #999;
+  font-size: 1rem;
+}
+
+/* Password field with eye icon - CORRECTED */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field .auth-input {
+  width: 100%;
+  padding-right: 2.5rem !important; /* Force padding for eye icon */
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+    height: 1.5rem; /* Fixed height instead of 2.5rem */
+  line-height: 1; 
+}
+
+.password-toggle:hover {
+  color: orangered;
+   transform: translateY(-50%); /* Keep the same transform on hover */
+  background: none;
+}
+
+.password-toggle:focus {
+  outline: none;
+   transform: translateY(-50%);
+}
+.password-toggle svg {
+  display: block; /* Prevent inline spacing issues */
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Adjust for signup mode */
+.auth-form-section.signup-mode .password-field .auth-input {
+  padding: 0.7rem 2.5rem 0.7rem 0 !important;
+}
+
+.auth-form-section.signup-mode .password-toggle {
+  font-size: 1.1rem;
+  width: 2.2rem;
+  height: 1.3rem;
+}
+
+.auth-form-section.signup-mode .password-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Continue Button */
+.continue-btn {
+  width: 100%;
+  padding: 1rem;
+  background: orangered;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1.5rem 0;
+  transition: background-color 0.2s;
+}
+
+.continue-btn:hover {
+  background: #ff6a33;
+}
+
+.continue-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 1.2rem 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 30px);
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  background: white;
+  padding: 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: background-color 0.2s;
+  color: #333;
+}
+
+.social-btn:hover {
+  background: #f5f5f5;
+}
+
+.social-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Terms Text */
+.terms-text {
+  color: #666;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 1.2rem 0;
+  line-height: 1.5;
+}
+
+/* Toggle Auth */
+.toggle-auth {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.toggle-link {
+  background: none;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0;
+  margin-left: 0.3rem;
+}
+
+.toggle-link:hover {
+  color: #333;
+}
+
+.toggle-link:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Validation error styling */
+.input-group.error .auth-input,
+.input-group.error .phone-input {
+  border-bottom-color: #ff4444;
+}
+
+.error-message,
+.error-text {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  padding-left: 0.5rem;
+  display: block;
+}
+
+.input-group.success .auth-input,
+.input-group.success .phone-input {
+  border-bottom-color: #00C851;
+}
+
+/* OTP Error Styles */
+.otp-error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: shake 0.5s ease;
+}
+
+.otp-input.error {
+  border-color: #dc2626 !important;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Success message */
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Signup Mode Specific Styles */
+.auth-form-section.signup-mode {
+  padding: 1.5rem 2rem;
+}
+
+.auth-form-section.signup-mode .input-group {
+  margin-bottom: 0.8rem;
+}
+
+.auth-form-section.signup-mode .name-row {
+  margin-bottom: 0.3rem;
+  gap: 0.8rem;
+}
+
+.auth-form-section.signup-mode .auth-input {
+  padding: 0.7rem 0;
+  font-size: 0.95rem;
+}
+
+.auth-form-section.signup-mode .password-field .auth-input {
+  padding: 0.7rem 2.5rem 0.7rem 0 !important;
+}
+
+.auth-form-section.signup-mode .password-toggle {
+  font-size: 1.1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.auth-form-section.signup-mode .continue-btn {
+  margin: 0.8rem 0;
+  padding: 0.9rem;
+}
+
+.auth-form-section.signup-mode .divider {
+  margin: 0.8rem 0;
+}
+
+.auth-form-section.signup-mode .social-buttons {
+  margin: 0.8rem 0;
+  gap: 0.7rem;
+}
+
+.auth-form-section.signup-mode .social-btn {
+  padding: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.auth-form-section.signup-mode .terms-text {
+  margin: 0.8rem 0;
+  font-size: 0.75rem;
+}
+
+.auth-form-section.signup-mode .toggle-auth {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Forgot Password Styles */
+.forgot-password-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: orangered;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+}
+
+.forgot-password-link:hover {
+  color: #ff6a33;
+}
+
+.forgot-password-link:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Forgot Password Mode */
+.auth-form-section.forgot-password-mode {
+  padding: 2rem 2.5rem;
+}
+
+.auth-form-section.forgot-password-mode .form-wrapper {
+  justify-content: center;
+}
+
+.back-to-login {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.back-to-login:hover {
+  color: orangered;
+}
+
+.back-to-login svg {
+  font-size: 0.9rem;
+}
+
+.reset-instruction {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* OTP Verification Styles */
+.otp-mode .form-wrapper {
+  justify-content: center;
+}
+
+.otp-container {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.otp-input {
+  width: 3.5rem;
+  height: 4rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  outline: none;
+  transition: all 0.2s;
+  background: white;
+}
+
+.otp-input:focus {
+  border-color: orangered;
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.1);
+}
+
+.otp-input::-webkit-inner-spin-button,
+.otp-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.otp-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.otp-instruction {
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.otp-instruction strong {
+  color: orangered;
+  font-weight: 600;
+}
+
+.resend-otp-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.resend-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.resend-otp-link {
+  background: none;
+  border: none;
+  color: orangered;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.2s;
+}
+
+.resend-otp-link:hover {
+  color: #ff6a33;
+}
+
+.resend-otp-link:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Reset Password Mode Styles */
+.reset-password-mode .form-wrapper {
+  justify-content: center;
+}
+
+.reset-password-mode .auth-input:disabled,
+.reset-password-mode .auth-input[readonly] {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+  border-bottom-color: #ccc;
+}
+
+.reset-password-mode .reset-instruction {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Disabled inputs */
+input:disabled,
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Large Desktop Screens (1200px and above) */
+@media (min-width: 1200px) {
+  .auth-content {
+    max-width: 1200px;
+  }
+  
+  .auth-image-section,
+  .auth-form-section {
+    min-height: 650px;
+    height: 650px;
+    max-height: 650px;
+  }
+  
+  .image-title {
+    font-size: 2.8rem;
+  }
+  
+  .auth-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* Standard Desktop / Laptop (900px - 1199px) */
+@media (max-width: 1199px) and (min-width: 901px) {
+  .auth-content {
+    max-width: 1000px;
+    gap: 0.8rem;
+  }
+  
+  .auth-image-section,
+  .auth-form-section {
+    min-height: 580px;
+    height: 580px;
+    max-height: 580px;
+  }
+  
+  .auth-form-section {
+    padding: 1.8rem 2.2rem;
+  }
+  
+  .auth-form-section.signup-mode {
+    padding: 1.3rem 1.8rem;
+  }
+  
+  .image-title {
+    font-size: 2.3rem;
+  }
+  
+  .auth-title {
+    font-size: 2.3rem;
+    margin-bottom: 1.3rem;
+  }
+}
+
+/* Small Desktop / Large Tablet (769px - 900px) */
+@media (max-width: 900px) {
+  .auth-content {
+    max-width: 850px;
+    gap: 0.8rem;
+  }
+  
+  .auth-image-section {
+    min-height: 500px;
+    height: 500px;
+    max-height: 500px;
+    border-radius: 35px;
+  }
+  
+  .auth-form-section {
+    min-height: 500px;
+    height: 500px;
+    max-height: 500px;
+    padding: 1.5rem 2rem;
+    border-radius: 35px;
+  }
+  
+  .auth-form-section.signup-mode {
+    padding: 1.2rem 1.8rem;
+  }
+  
+  .image-overlay {
+    padding: 1.5rem;
+    border-radius: 35px;
+  }
+  
+  .image-title {
+    font-size: 2.2rem;
+  }
+  
+  .auth-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .image-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .name-row {
+    gap: 0.8rem;
+  }
+  
+  .phone-input,
+  .auth-input {
+    padding: 0.9rem 0;
+    font-size: 1rem;
+  }
+  
+  .password-field .auth-input {
+    padding-right: 2.5rem !important;
+  }
+  
+  .continue-btn {
+    padding: 0.9rem;
+    margin: 1.2rem 0;
+  }
+  
+  .auth-form-section.signup-mode .auth-input {
+    padding: 0.65rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .auth-form-section.signup-mode .password-field .auth-input {
+    padding: 0.65rem 2.5rem 0.65rem 0 !important;
+  }
+}
+
+/* Tablet (601px - 768px) */
+@media (max-width: 768px) {
+  .auth-content {
+    flex-direction: column;
+    gap: 0;
+    max-width: 500px;
+  }
+
+  .auth-image-section {
+    min-height: 220px;
+    height: 220px;
+    max-height: 220px;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    border-radius: 25px;
+    order: 1;
+  }
+
+  .auth-form-section {
+    min-height: auto;
+    height: auto;
+    max-height: none;
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    border-radius: 25px;
+    order: 2;
+  }
+
+  .auth-form-section.signup-mode {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .image-overlay {
+    padding: 1rem;
+    border-radius: 25px;
+  }
+
+  .image-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .auth-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .name-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .half-width {
+    width: 100%;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .auth-form-section.signup-mode .input-group {
+    margin-bottom: 0.7rem;
+  }
+  
+  .phone-input,
+  .auth-input {
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .password-field .auth-input {
+    padding-right: 2.5rem !important;
+  }
+  
+  .password-toggle {
+    font-size: 1.1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .continue-btn {
+    padding: 0.8rem;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .social-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .terms-text {
+    font-size: 0.7rem;
+    margin: 0.8rem 0;
+  }
+  
+  .toggle-auth {
+    font-size: 0.85rem;
+  }
+  
+  .otp-container {
+    gap: 0.5rem;
+  }
+  
+  .otp-input {
+    width: 2.8rem;
+    height: 3.2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .forgot-password-link {
+    font-size: 0.85rem;
+  }
+  
+  .back-to-login {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .reset-instruction {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 0.5rem;
+  }
+  
+  .auth-image-section {
+    min-height: 180px;
+    height: 180px;
+    max-height: 180px;
+    border-radius: 20px;
+  }
+  
+  .auth-form-section {
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+  
+  .auth-form-section.signup-mode {
+    padding: 1rem 1.2rem;
+  }
+  
+  .image-overlay {
+    padding: 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .image-title {
+    font-size: 1.4rem;
+  }
+  
+  .auth-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .image-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .phone-input,
+  .auth-input {
+    padding: 0.7rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .password-field .auth-input {
+    padding-right: 2.2rem !important;
+  }
+  
+  .password-toggle {
+    font-size: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  
+  .auth-form-section.signup-mode .auth-input {
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .auth-form-section.signup-mode .password-field .auth-input {
+    padding: 0.5rem 2rem 0.5rem 0 !important;
+  }
+  
+  .auth-form-section.signup-mode .password-toggle {
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .continue-btn {
+    padding: 0.7rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+  
+  .social-btn {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+    border-radius: 25px;
+  }
+  
+  .social-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .divider {
+    margin: 0.8rem 0;
+  }
+  
+  .divider span {
+    font-size: 0.8rem;
+  }
+  
+  .terms-text {
+    font-size: 0.65rem;
+    margin: 0.6rem 0;
+  }
+  
+  .toggle-auth {
+    font-size: 0.8rem;
+  }
+  
+  .error-message,
+  .error-text {
+    font-size: 0.7rem;
+  }
+  
+  .otp-container {
+    gap: 0.4rem;
+  }
+  
+  .otp-input {
+    width: 2.5rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    border-radius: 8px;
+  }
+  
+  .otp-instruction {
+    font-size: 0.9rem;
+  }
+  
+  .resend-text,
+  .resend-otp-link {
+    font-size: 0.85rem;
+  }
+  
+  .forgot-password-link {
+    font-size: 0.8rem;
+  }
+  
+  .back-to-login {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .reset-instruction {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Very Small Mobile (up to 380px) */
+@media (max-width: 380px) {
+  .auth-image-section {
+    min-height: 150px;
+    height: 150px;
+    max-height: 150px;
+  }
+  
+  .auth-form-section {
+    padding: 1rem;
+  }
+  
+  .auth-form-section.signup-mode {
+    padding: 0.8rem 1rem;
+  }
+  
+  .image-title {
+    font-size: 1.2rem;
+  }
+  
+  .auth-title {
+    font-size: 1.4rem;
+  }
+  
+  .image-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .phone-input,
+  .auth-input {
+    padding: 0.6rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .password-field .auth-input {
+    padding-right: 2rem !important;
+  }
+  
+  .password-toggle {
+    font-size: 0.9rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .continue-btn {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .social-btn {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .terms-text {
+    font-size: 0.6rem;
+  }
+  
+  .toggle-auth {
+    font-size: 0.75rem;
+  }
+  
+  .otp-container {
+    gap: 0.3rem;
+  }
+  
+  .otp-input {
+    width: 2.2rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+  }
+}
+/* Success message */
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

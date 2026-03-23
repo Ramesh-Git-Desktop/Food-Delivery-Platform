@@ -1,0 +1,368 @@
+/* DelightfulDishes.css */
+.dd-section {
+  padding: 56px 0 48px;
+}
+
+/* ── Header ── */
+.dd-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 4px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dd-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dd-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f4a225;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dd-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.dd-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dd-view-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: 2px solid #1a4a4a;
+  background: transparent;
+  color: #1a4a4a;
+  font-weight: 700;
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.dd-view-all:hover {
+  background: #1a4a4a;
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.dd-view-all svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.22s ease;
+}
+
+.dd-view-all:hover svg {
+  transform: translateX(4px);
+}
+
+/* Nav buttons */
+.dd-nav-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.dd-nav-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1a4a4a;
+}
+
+.dd-nav-btn:hover:not(.disabled) {
+  border-color: #f4a225;
+  background: #fff9f0;
+  box-shadow: 0 4px 12px rgba(244, 162, 37, 0.2);
+}
+
+.dd-nav-btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.dd-nav-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Cards Track ── */
+.dd-cards-wrapper {
+  overflow: hidden;
+}
+
+.dd-cards-track {
+  display: flex;
+  gap: 18px;
+  transition: all 0.35s ease;
+  padding: 30px 10px;
+}
+
+/* Individual Card */
+.dd-card {
+  flex: 0 0 calc(20% - 15px);
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  animation: ddFadeIn 0.35s ease both;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes ddFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 2px 8px rgb(55, 55, 55);
+  border-color: #f4a225;
+}
+
+/* Image */
+.dd-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #1a4a4a;
+  overflow: hidden;
+}
+
+.dd-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.dd-card:hover .dd-img {
+  transform: scale(1.08);
+}
+
+.dd-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f4a225;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+/* Hover Actions Container */
+.dd-hover-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(26, 26, 46, 0.85);
+  opacity: 0;
+  backdrop-filter: blur(4px);
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.35, 0.66, 0.54, 1);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.dd-card:hover .dd-hover-actions {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Cart Button */
+.dd-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a4a4a 0%, #0f2e2e 100%);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 74, 74, 0.3);
+}
+
+.dd-cart-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(26, 74, 74, 0.4);
+}
+
+.dd-cart-btn:active {
+  transform: translateY(-1px);
+}
+
+/* View Button */
+.dd-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f4a225;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(244, 162, 37, 0.3);
+}
+
+.dd-view-btn:hover {
+  background: #f39c12;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(244, 162, 37, 0.4);
+}
+
+.dd-view-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Card Body */
+.dd-card-body {
+  padding: 12px 14px 14px;
+}
+
+.dd-category {
+  font-size: 0.68rem;
+  color: #aaa;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 4px;
+}
+
+.dd-dish-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 4px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.dd-restaurant-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #f4a225;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dd-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dd-price {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1a4a4a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dd-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Dots */
+.dd-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 28px;
+}
+
+.dd-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.dd-dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: #f4a225;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dd-card { flex: 0 0 calc(25% - 14px); }
+  .dd-cards-track { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+}
+
+@media (max-width: 900px) {
+  .dd-card { flex: 0 0 calc(33.33% - 12px); }
+  .dd-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .dd-card { flex: 0 0 calc(50% - 9px); }
+  .dd-title { font-size: 1.25rem; }
+  .dd-view-all { padding: 8px 16px; font-size: 0.78rem; }
+}

@@ -1,0 +1,307 @@
+.banner {
+  height: 500px;
+  background: url("./image/foodbanner.png") center/cover no-repeat;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h1 {
+  letter-spacing: 4px;
+  font-size: 60px;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  color: #f4a300;  /* Orange hover */
+}
+
+.breadcrumb-active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ✅ 2. About Section  */
+.small-heading {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #999;
+}
+
+.main-heading {
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+  line-height: 1.2;
+}
+
+.orange-text p {
+  color: #f15a24;   /* Exact orange tone */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.custom-img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* ✅ 3. Stats Section */
+
+.stats {
+  background-color: #ffffff;   /* Light grey */
+}
+
+.stat-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #F4DF22;
+;   /* Yellow color like image */
+}
+/* Fade Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effects */
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.main-img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.main-img:hover {
+  transform: scale(1.03);
+}
+
+.quote-img {
+  width: 60px;
+  filter: brightness(0);
+}
+
+
+/* ✅ 4. Middle Content */
+.section-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.section-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.section-desc {
+    font-size: 19px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.feature-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.feature-item h6 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.feature-item p {
+  font-size: 15px;
+  color: #777;
+}
+
+/* Right Images */
+.img-small {
+  width: 45%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.img-large {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Decorative image in white space */
+.decor-img {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: 80px;
+  opacity: 0.8;
+}
+
+
+/* ✅ 5. Testimonials */
+
+.testimonial {
+  background: #f3f3f3;
+}
+
+.quote-img {
+  width: 60px;
+  filter: brightness(0);
+  transform: rotate(-180deg);
+  margin-bottom: 30px;
+}
+
+
+.testimonial-text {
+  max-width: 750px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.client-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.client-location {
+  color: #888;
+  font-size: 14px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.custom-carousel {
+  background: #f3f3f3;
+}
+
+.main-img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-content {
+  position: relative;
+  display: inline-block;
+}
+
+.slide-number {
+  position: absolute;
+  bottom: 10px;
+  right: -40px;
+  font-size: 20px;
+  color: #888;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 28px;
+  color: #000;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+
+
+@media (max-width: 768px) {
+  .banner {
+    height: 350px;
+  }
+
+  .banner h1 {
+    font-size: 32px;
+  }
+    .main-heading {
+    font-size: 26px;
+  }
+
+  .custom-img {
+    height: 300px;
+  }
+    .stat-number {
+    font-size: 36px;
+  }
+   .img-small {
+    width: 100%;
+  }
+
+  .decor-img {
+    display: none;
+  }
+    .main-img {
+    height: 220px;
+  }
+
+  .slide-number {
+    right: 10px;
+  }
+}

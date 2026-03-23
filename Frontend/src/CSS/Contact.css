@@ -1,0 +1,458 @@
+/* ════════════════════════════════════════════════════════════
+   Contact.css  —  Hungry Hub
+════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.contact-page {
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ════════════════════════════════════════════════════════════
+   SECTION 1 — BANNER
+════════════════════════════════════════════════════════════ */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 360px;
+  padding: 60px 7% 40px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0c1120;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* dark overlay */
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 35, 0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner__left {
+  flex: 1;
+  max-width: 440px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.22;
+  margin-bottom: 16px;
+}
+
+.banner__sub {
+  font-size: clamp(0.75rem, 1.15vw, 0.88rem);
+  color: rgba(255,255,255,0.68);
+  line-height: 1.78;
+  margin-bottom: 28px;
+  max-width: 340px;
+}
+
+.banner__btn {
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
+  border-radius: 30px;
+  padding: 9px 26px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.22s, color 0.22s;
+}
+.banner__btn:hover { background: #ffffff; color: #0c1120; }
+
+.banner__right {
+  flex: 0 0 auto;
+  width: clamp(200px, 40%, 420px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.55));
+}
+
+/* ════════════════════════════════════════════════════════════
+   SECTION 2 — CONTACT US
+════════════════════════════════════════════════════════════ */
+.contact-section {
+  background-color: #F5A623;
+  padding: 55px 5% 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+}
+
+.cs-deco--arc-tl {
+  top:  -30px;
+  left: 0px;
+  width: 200px;
+  opacity: 0.85;
+}
+
+.cs-deco--crown {
+  top:  55px;
+  left: 225px;
+  width: 45px;
+  opacity: 0.9;
+}
+
+.cs-deco--rocket {
+  top:  40px;
+  left: 350px;
+  width: 50px;
+  opacity: 0.9;
+}
+
+.cs-deco--arrow {
+  bottom: 25px;
+  right:  25px;
+  width:  130px;
+  opacity: 0.85;
+}
+
+.contact-section__heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section__body {
+  display: flex;
+  gap: 55px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cmap {
+  position: relative;
+  flex: 0 0 auto;
+  width: 430px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.25);
+}
+
+.cmap iframe {
+  width:  100%;
+  height: 390px;
+  display: block;
+  border: none;
+}
+
+.cmap__label {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.95);
+  color: #222;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.cform {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.cform__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.cform__field label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 8px;
+}
+
+.cform__field input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.8px solid rgba(0,0,0,0.35);
+  padding: 10px 0;
+  font-size: 0.88rem;
+  color: #1a1a1a;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.cform__field input:focus { border-bottom-color: #111; }
+
+.cform__btn {
+  align-self: flex-start;
+  margin-top: 30px;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 64px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  transition: background 0.22s, color 0.22s;
+}
+.cform__btn:hover { background: #1a1a1a; color: #ffffff; }
+
+/* ════════════════════════════════════════════════════════════
+   SECTION 3 — HUNGRY HUB
+════════════════════════════════════════════════════════════ */
+.hub-section {
+  padding: 50px 7% 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #0c1120;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* dark overlay */
+.hub-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 12, 28, 0.62);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* all children above overlay */
+.hub-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Brand title ── */
+.hub__brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  font-weight: 900;
+  color: #F5A623;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* ── Strip wrapper ── */
+.hub__strip {
+  display: flex;
+  align-items: stretch;
+  width: 75%;
+  max-width: 860px;
+  min-width: 600px;
+  min-height: 260px;
+  border-radius: 0 20px 20px 0;
+  /* overflow visible so phone circle can bleed left over the seam */
+  overflow: visible;
+  box-shadow: 0 10px 44px rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
+
+/* ── Left: team photo — clip only the photo ── */
+.hub__photo {
+  flex: 0 0 44%;
+  overflow: hidden;
+  border-radius: 0;
+  /* clip photo to strip shape */
+  clip-path: inset(0);
+}
+.hub__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ── Right: orange panel — rounded right corners ── */
+.hub__orange-panel {
+  flex: 1;
+  background-color: #F5A623;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px 44px 28px 0px;
+  gap: 22px;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+}
+
+/* ── Phone row: circle on LEFT edge of orange panel + text right ── */
+.hub__phone-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding-left: 0;
+}
+
+/* white circle — sits on the divider line between photo and orange */
+.hub__phone-circle {
+  flex-shrink: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  /* pull it left to sit on the seam between photo and orange panel */
+  margin-left: -42px;
+  position: relative;
+  z-index: 2;
+}
+
+.hub__cta-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  /* dark colour matching target image */
+  color: #1a1a1a;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+.hub__cta-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  font-weight: 800;
+  /* dark colour matching target image */
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ── Social icons — bottom of orange panel, left-aligned under text ── */
+.hub__socials {
+  display: flex;
+  gap: 10px;
+  /* indent to align under the CTA text (after circle width + gap) */
+  padding-left: calc(84px - 42px + 24px);
+}
+
+.hub__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.3);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.22s;
+}
+.hub__icon:hover { background: rgba(255,255,255,0.55); }
+
+/* ── Copyright — bottom-left, below strip ── */
+.hub__copy {
+  width: 75%;
+  max-width: 860px;
+  min-width: 600px;
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.3px;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.hub__copy-brand {
+  color: #F5A623;
+  font-weight: 700;
+}
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .cmap { width: 100%; max-width: 500px; }
+  .hub__strip { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 44px 6% 0;
+    min-height: unset;
+  }
+  .banner__left  { max-width: 100%; }
+  .banner__sub   { max-width: 100%; margin-inline: auto; }
+  .banner__right { width: 78%; justify-content: center; margin-top: 24px; }
+
+  .cs-deco--arc-tl { width: 100px; top: -15px; left: -15px; }
+  .cs-deco--crown  { width: 34px;  top: 42px;  left: 90px;  }
+  .cs-deco--rocket { width: 38px;  top: 32px;  left: 162px; }
+  .cs-deco--arrow  { width: 90px;  bottom: 18px; right: 14px; }
+
+  .contact-section { padding: 44px 4% 70px; }
+  .contact-section__body { flex-direction: column; align-items: center; gap: 30px; }
+  .cmap iframe { height: 260px; }
+  .cform { max-width: 100%; }
+
+  .hub__strip  { flex-direction: column; width: 92%; min-width: unset; border-radius: 0 0 16px 16px; min-height: unset; }
+  .hub__photo  { flex: 0 0 auto; width: 100%; height: 200px; }
+  .hub__orange-panel { border-radius: 0 0 16px 16px; padding: 22px 20px 20px; gap: 18px; }
+  .hub__cta-number { font-size: 1.1rem; }
+  .hub__copy   { width: 92%; min-width: unset; text-align: left; }
+}

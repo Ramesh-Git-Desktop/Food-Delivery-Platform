@@ -1,0 +1,47 @@
+/* src/styles/Features.css */
+.features-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: #fff;
+}
+
+.features-image {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.features-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.features-highlight {
+  color: var(--primary-color);
+}
+
+.features-label {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.features-text {
+  color: #e5e7eb;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}

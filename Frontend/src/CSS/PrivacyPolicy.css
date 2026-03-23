@@ -1,0 +1,405 @@
+/* ════════════════════════════════════════════════════════════
+   PrivacyPolicy.css  —  Hungry Hub  |  Classic Design
+════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.pp-page {
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  background-color: #f9f7f3;
+  color: #1a1a2e;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ════════════════════════════════════════════════════════════
+   BANNER
+════════════════════════════════════════════════════════════ */
+.pp-banner {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c1120;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 70px 7% 80px;
+  text-align: center;
+}
+
+/* dark overlay */
+.pp-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 12, 30, 0.75);
+  z-index: 0;
+}
+
+/* dot-grid texture */
+.pp-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(245,166,35,0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* amber glow */
+.pp-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(245,166,35,0.14) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pp-banner__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.pp-banner__breadcrumb {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.pp-banner__heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  /* amber underline */
+  position: relative;
+  display: inline-block;
+}
+
+.pp-banner__heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: #F5A623;
+  border-radius: 3px;
+  margin: 14px auto 0;
+}
+
+.pp-banner__sub {
+  font-size: clamp(0.88rem, 1.4vw, 1.05rem);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin-top: 6px;
+}
+
+/* amber bottom border on banner */
+.pp-banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   WRAPPER
+════════════════════════════════════════════════════════════ */
+.pp-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 5% 80px;
+}
+
+/* ── Effective date bar ── */
+.pp-date-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #ede9e0;
+  border-left: 4px solid #F5A623;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+
+.pp-date-bar p {
+  font-size: 0.84rem;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pp-date-bar strong {
+  color: #0c1120;
+}
+
+/* ── Intro box ── */
+.pp-intro-box {
+  background: #0c1120;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pp-intro-box p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.85;
+}
+
+.pp-intro-box strong {
+  color: #F5A623;
+  font-weight: 700;
+}
+
+/* ════════════════════════════════════════════════════════════
+   SECTIONS
+════════════════════════════════════════════════════════════ */
+.pp-section {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid #ede9e0;
+  align-items: flex-start;
+}
+
+.pp-section:last-of-type {
+  border-bottom: none;
+}
+
+/* number label */
+.pp-section__label {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #F5A623;
+  color: #F5A623;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* content */
+.pp-section__body {
+  flex: 1;
+}
+
+.pp-section__body h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0c1120;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #F5A623;
+  display: inline-block;
+}
+
+.pp-section__body p {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+
+.pp-section__body p:last-child {
+  margin-bottom: 0;
+}
+
+.pp-section__body ul {
+  padding-left: 0;
+  margin: 12px 0 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pp-section__body ul li {
+  font-size: 0.91rem;
+  color: #444;
+  line-height: 1.75;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pp-section__body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  background: #F5A623;
+  border-radius: 50%;
+}
+
+.pp-section__body ul li strong {
+  color: #0c1120;
+  font-weight: 700;
+}
+
+.pp-section__body a {
+  color: #F5A623;
+  font-weight: 600;
+  text-decoration: none;
+}
+.pp-section__body a:hover { text-decoration: underline; }
+
+
+
+/* ════════════════════════════════════════════════════════════
+   CONTACT BOX
+════════════════════════════════════════════════════════════ */
+.pp-contact-box {
+  display: flex;
+  gap: 0;
+  background: #0c1120;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 56px;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.pp-contact-box__left {
+  flex: 1;
+  padding: 40px 40px;
+}
+
+.pp-contact-box__left h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.pp-contact-box__left > p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.pp-contact-box__details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pp-contact-box__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pp-contact-box__item span {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pp-contact-box__item a,
+.pp-contact-box__item p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.pp-contact-box__item a {
+  color: #F5A623;
+  font-weight: 600;
+}
+.pp-contact-box__item a:hover { text-decoration: underline; }
+
+.pp-contact-box__right {
+  flex: 0 0 200px;
+  background: #F5A623;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+.pp-contact-box__badge {
+  text-align: center;
+}
+
+.pp-contact-box__shield {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.pp-contact-box__badge p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0c1120;
+  line-height: 1.4;
+}
+
+/* ── Bottom note ── */
+.pp-bottom-note {
+  font-size: 0.76rem;
+  color: #aaa;
+  text-align: center;
+  letter-spacing: 0.3px;
+  padding-top: 16px;
+  border-top: 1px solid #ede9e0;
+}
+
+.pp-bottom-note strong {
+  color: #F5A623;
+}
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .pp-banner { min-height: 250px; padding: 56px 5% 64px; }
+  .pp-wrapper { padding: 36px 5% 56px; }
+
+  .pp-intro-box { padding: 24px 22px; }
+
+  .pp-section { flex-direction: column; gap: 14px; }
+  .pp-section__label { width: 40px; height: 40px; font-size: 0.72rem; }
+
+  .pp-contact-box { flex-direction: column; }
+  .pp-contact-box__left { padding: 28px 24px; }
+  .pp-contact-box__right { flex: none; padding: 24px; flex-direction: row; gap: 16px; }
+  .pp-contact-box__badge { display: flex; align-items: center; gap: 12px; }
+  .pp-contact-box__shield { font-size: 2.2rem; margin: 0; }
+}
